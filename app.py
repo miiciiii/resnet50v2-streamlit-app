@@ -4,17 +4,17 @@ import tensorflow as tf
 import joblib
 import streamlit as st
 from PIL import Image
-import tensorflow as tf
 
-MODEL_SAVE_PATH = 'resnet50v2_model.keras'
-
+# MODEL_SAVE_PATH = os.path.join('..', 'resnetmodelandlabelencoder', 'resnet50v2_model.keras')
+# LABEL_LOADER_PATH1 = os.path.join('..', 'resnetmodelandlabelencoder', 'label_encoder_arousal.pkl')
+# LABEL_LOADER_PATH2 = os.path.join('..', 'resnetmodelandlabelencoder', 'label_encoder_dominance.pkl')
 #Load the model
 
-if os.path.exists(MODEL_SAVE_PATH):
-    print(f"Loading model from {MODEL_SAVE_PATH}...")
-    model = tf.keras.models.load_model(MODEL_SAVE_PATH)
+if os.path.exists('resnet50v2_model.keras'):
+    print(f"Loading model from {'resnet50v2_model.keras'}...")
+    model = tf.keras.models.load_model('resnet50v2_model.keras')
 else:
-    raise FileNotFoundError(f"Model file not found at {MODEL_SAVE_PATH}")
+    raise FileNotFoundError(f"Model file not found at {'resnet50v2_model.keras'}")
 
 # Load OneHotEncoders
 arousal_encoder = joblib.load('label_encoder_arousal.pkl')
