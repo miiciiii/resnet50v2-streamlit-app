@@ -5,10 +5,6 @@ import joblib
 import streamlit as st
 from PIL import Image
 
-# MODEL_SAVE_PATH = os.path.join('..', 'resnetmodelandlabelencoder', 'resnet50v2_model.keras')
-# LABEL_LOADER_PATH1 = os.path.join('..', 'resnetmodelandlabelencoder', 'label_encoder_arousal.pkl')
-# LABEL_LOADER_PATH2 = os.path.join('..', 'resnetmodelandlabelencoder', 'label_encoder_dominance.pkl')
-#Load the model
 
 if os.path.exists('resnet50v2_model.keras'):
     print(f"Loading model from {'resnet50v2_model.keras'}...")
